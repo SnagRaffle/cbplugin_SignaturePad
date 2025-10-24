@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.0" type="plugin" group="user">
+  <name>CB Signature Pad</name>
+  <author>HFHGC</author>
+  <creationDate>2025-10-24</creationDate>
+  <license>GPL-2.0-or-later</license>
+  <authorEmail>admin@example.com</authorEmail>
+  <version>1.1.2</version>
+  <description>Community Builder field type: Signature Pad with configurable pen, height, colors, preview, delete &amp; download.</description>
+  <files>
+    <filename plugin="cbsignaturepad">cbsignaturepad/cbsignaturepad.php</filename>
+    <filename>cbsignaturepad/index.html</filename>
+    <filename>cbsignaturepad/media/sigpad.css</filename>
+    <filename>cbsignaturepad/media/sigpad.js</filename>
+    <filename>cbsignaturepad/tmpl/edit.php</filename>
+    <filename>cbsignaturepad/tmpl/view.php</filename>
+  </files>
+  <params>
+    <param name="storagePath" type="text" default="" label="Private storage absolute path (default: ../private_signatures)" />
+    <param name="allowedGroups" type="text" default="8" label="Groups allowed to view others (CSV ids)" />
+    <param name="penColor" type="text" default="#000000" label="Pen color (hex)" />
+    <param name="penWidth" type="integer" default="2" label="Pen width (px)" />
+    <param name="canvasHeight" type="integer" default="200" label="Canvas height (px)" />
+    <param name="bgColor" type="text" default="#FFFFFF" label="Canvas background color (hex)" />
+    <param name="showInView" type="radio" default="1" label="Show image in View Profile?">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </param>
+    <param name="showDelete" type="radio" default="1" label="Show Delete button?">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </param>
+    <param name="showDownload" type="radio" default="1" label="Show Download button?">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </param>
+    <param name="buttonSaveText" type="text" default="Accept &amp; Save" label="Save button text" />
+    <param name="buttonClearText" type="text" default="Clear" label="Clear button text" />
+    <param name="buttonDeleteText" type="text" default="Delete" label="Delete button text" />
+  </params>
+</cbinstall>
